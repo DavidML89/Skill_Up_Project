@@ -15,12 +15,13 @@
   border-width: 3px;
 }
 
-.back {
+.back-button {
   color: $darkgreen;
   padding-top: 30px;
+  font-size: 18px;
 }
 
-.back a:hover {
+.back-button a:hover {
   color: $darker-rose;
 }
 
