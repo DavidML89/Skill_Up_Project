@@ -32,7 +32,7 @@ class BookingsController < ApplicationController
         end
 
       else
-        { alert: "You don't have enough coin" }
+        { alert: "You don't have enough coins" }
       end
     else
       render 'user_skills/show'
