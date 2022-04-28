@@ -3,25 +3,12 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def new
-    @user = User.new
-    @user.save
+  def create
+    @user = User.new.find(params[:user])
+    if @user.save
       @user.points += 10
     end
   end
-
-  def update
-    @user_description = current_user
-    @user.description = params[:description] || params[:user][:description]
-    @user_skill.save
-    authorize @user.description
-    if @user_description.save!
-      redirect_to dashboard_path
-    else
-      render
-    end
-  end
-end
 
 
 # def create
